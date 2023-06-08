@@ -4,12 +4,12 @@ import { RoomsWrapper } from './style'
 import RoomItem from '../room-item'
 
 const SectionRooms = memo((props) => {
-  const { roomList = [] } = props
+  const { roomList = [], itemWidth } = props
   return (
     <RoomsWrapper>
       {
         roomList.slice(0, 8).map(item => {
-          return <RoomItem key={item.id} itemData={item} />
+          return <RoomItem key={item.id} itemData={item} itemWidth={itemWidth} />
         })
       }
     </RoomsWrapper>
