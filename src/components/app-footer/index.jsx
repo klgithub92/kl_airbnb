@@ -3,6 +3,7 @@ import { FooterWrapper } from './style'
 import footerData from "@/assets/data/footer.json"
 
 const AppFooter = memo(() => {
+  console.log('检查跳转路由组件打印次数')
   return (
     <FooterWrapper>
       <div className='wrapper'>

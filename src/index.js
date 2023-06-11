@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -15,13 +15,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // Suspense解决路由懒加载显示
   <Provider store={store}>
-    <Suspense fallback={<h2>loading...</h2>}>
-      <ThemeProvider theme={theme}>
-        <HashRouter>
-          <App />
-        </HashRouter>
-      </ThemeProvider>
-    </Suspense>
+    {/* <Suspense fallback={<h2>loading...</h2>}> */}
+    <ThemeProvider theme={theme}>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </ThemeProvider>
+    {/* </Suspense> */}
   </Provider>
 
 );
