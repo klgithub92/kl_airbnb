@@ -14,13 +14,14 @@ import theme from './assets/theme';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // Suspense解决路由懒加载显示
-  <Suspense fallback={<h2>loading...</h2>}>
-    <Provider store={store}>
+  <Provider store={store}>
+    <Suspense fallback={<h2>loading...</h2>}>
       <ThemeProvider theme={theme}>
         <HashRouter>
           <App />
         </HashRouter>
       </ThemeProvider>
-    </Provider>
-  </Suspense>
+    </Suspense>
+  </Provider>
+
 );
